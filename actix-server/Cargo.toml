@@ -21,9 +21,9 @@ default = []
 io-uring = ["actix-rt/io-uring"]
 
 [dependencies]
-actix-rt = { version = "2.0.0", default-features = false }
-actix-service = "2.0.0"
-actix-utils = "3.0.0"
+actix-rt = { path = "../actix-rt", default-features = false }
+actix-service = { path = "../actix-service" }
+actix-utils = { path = "../actix-utils" }
 
 futures-core = { version = "0.3.7", default-features = false, features = ["alloc"] }
 log = "0.4"
@@ -32,8 +32,8 @@ num_cpus = "1.13"
 tokio = { version = "1.5.1", features = ["sync"] }
 
 [dev-dependencies]
-actix-codec = "0.4.0"
-actix-rt = "2.0.0"
+actix-codec = { path = "../actix-codec" }
+actix-rt = { path = "../actix-rt" }
 
 bytes = "1"
 env_logger = "0.9"

@@ -38,10 +38,10 @@ native-tls = ["tokio-native-tls"]
 uri = ["http"]
 
 [dependencies]
-actix-codec = "0.4.0"
-actix-rt = { version = "2.2.0", default-features = false }
-actix-service = "2.0.0"
-actix-utils = "3.0.0"
+actix-codec = { path = "../actix-codec" }
+actix-rt = { path = "../actix-rt", default-features = false }
+actix-service = { path = "../actix-service" }
+actix-utils = { path = "../actix-utils" }
 
 derive_more = "0.99.5"
 futures-core = { version = "0.3.7", default-features = false, features = ["alloc"] }
@@ -61,8 +61,8 @@ webpki-roots = { version = "0.22", optional = true }
 tokio-native-tls = { version = "0.3", optional = true }
 
 [dev-dependencies]
-actix-rt = "2.2.0"
-actix-server = "2.0.0-beta.6"
+actix-rt = { path = "../actix-rt" }
+actix-server = { path = "../actix-server" }
 bytes = "1"
 env_logger = "0.9"
 futures-util = { version = "0.3.7", default-features = false, features = ["sink"] }
